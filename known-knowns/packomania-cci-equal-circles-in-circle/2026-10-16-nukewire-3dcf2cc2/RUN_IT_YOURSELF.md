@@ -9,8 +9,8 @@ From this package folder, in a fresh shell:
    ```
 
    Expected last line `PASS`; full expected output in verify-it-yourself/RECEIPTS.md. The
-   checker verifies object/candidate_N4141.txt (sha256 3dcf2cc2682a1d82bd30cea8ff5786151a72b5811416
-   6b17fa7702dde030869 — one line, 4141 centres), recomputes
+   checker verifies object/candidate_N4141.txt (sha256
+   b5cc9aef50c8aac1bdfa51107f030ca3f7e2ddf0f1483eb0c9336ee91095039e — 4141 centres), recomputes
    r* = min( min_{i<j} |c_i - c_j| / 2, 1 - max_i |c_i| ) at 60 significant digits from the
    coordinate strings, and requires margin >= 1e-11 over the recorded table value.
 

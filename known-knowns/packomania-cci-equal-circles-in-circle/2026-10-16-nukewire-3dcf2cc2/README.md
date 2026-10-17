@@ -49,6 +49,15 @@ the-record-we-beat/.
 - The queue-rule caveat above: the category-unspecified pending bundle is unresolved as of the
   fetch date; the cell must be re-checked when that bundle clears.
 
+## Packaging note
+
+The submission id retains the sha256-8 prefix (3dcf2cc2) of the object file as first assembled
+on Windows (CRLF line endings). The repository stores LF-normalized bytes; every hash in this
+package (SHA256SUMS, INDEX.csv, verify-it-yourself/check.py) refers to those committed LF bytes
+(object sha256 b5cc9aef50c8aac1bdfa51107f030ca3f7e2ddf0f1483eb0c9336ee91095039e), so checks
+pass on any fresh checkout. verify-it-yourself/check.py additionally accepts the CRLF-materialised
+form of the object (a core.autocrlf=true checkout), so its integrity check passes on both.
+
 ## Credits
 
 - Eckard Specht's Packomania (https://packomania.com) — the cci table, the radius data and the

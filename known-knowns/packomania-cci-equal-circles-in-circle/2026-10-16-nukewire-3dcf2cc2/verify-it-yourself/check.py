@@ -21,16 +21,20 @@ getcontext().prec = 60
 
 N = 4141
 OBJECT = "object/candidate_N4141.txt"
-OBJECT_SHA = "3dcf2cc2682a1d82bd30cea8ff5786151a72b5811416acb17fa7702dde030869"
+OBJECT_SHA = "b5cc9aef50c8aac1bdfa51107f030ca3f7e2ddf0f1483eb0c9336ee91095039e"
 TABLE = "0.014601755763187308074373236782"  # live radius.txt row 4141, fetched 2026-10-16T09:46:29Z
 THRESH = Decimal("1e-11")
 
 
 def main():
     raw = open(OBJECT, "rb").read()
+    # Line-ending tolerance: the recorded hash is of the committed LF bytes; a checkout with
+    # core.autocrlf=true materialises CRLF bytes. Either form passes; content corruption
+    # changes both and still fails.
     h = hashlib.sha256(raw).hexdigest()
-    if h != OBJECT_SHA:
-        print(f"FAIL: {OBJECT} sha256 {h} != recorded {OBJECT_SHA}")
+    h_lf = hashlib.sha256(raw.replace(b"\r\n", b"\n")).hexdigest()
+    if OBJECT_SHA not in (h, h_lf):
+        print(f"FAIL: {OBJECT} sha256 {h} (lf-form {h_lf}) != recorded {OBJECT_SHA}")
         return 1
     pts = []
     for line in raw.decode().splitlines():

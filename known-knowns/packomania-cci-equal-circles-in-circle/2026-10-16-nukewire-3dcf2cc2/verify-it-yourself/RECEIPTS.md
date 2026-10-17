@@ -1,4 +1,4 @@
-object sha256 ok (3dcf2cc2682a1d82...)
+object sha256 ok (b5cc9aef50c8aac1...)
 N = 4141
 r* (60-digit decimal, from coordinate strings) = 0.0146094714488139345759856245307456297376838717217189187511112
 table value (cell N=4141)                        = 0.014601755763187308074373236782
