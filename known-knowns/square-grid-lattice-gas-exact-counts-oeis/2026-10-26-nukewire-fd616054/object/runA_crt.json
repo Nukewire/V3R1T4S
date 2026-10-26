@@ -1,0 +1,5 @@
+{"run": "A (2026-10-25-1031)", "method": "class-DP transfer builder over the 6-element 2x2 matrix semigroup; rotation-orbit-reduced trace (2192 orbits); modular CRT",
+ "primes": [2147483629, 2147483587, 2147483579, 2147483563, 2147483549, 2147483423],
+ "residues": [1506067173, 528026610, 1334719431, 118632638, 1353341877, 653588299],
+ "crt_result": 4310182149988584261406143524214457416387448,
+ "modulus_bits": 186}

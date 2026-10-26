@@ -1,0 +1,5 @@
+{"run": "B (2026-10-26-0731)", "method": "DFS alternating-flip transfer builder (independent); dihedral-x-complement orbit reduction (612 orbits); sympy-proven primes; modular CRT",
+ "primes": [1073741789, 1073741783, 1073741741, 1073741723, 1073741719, 1073741717],
+ "residues": [737846604, 6008175, 839610047, 1060255071, 989703240, 150059073],
+ "crt_result": 4310182149988584261406143524214457416387448,
+ "modulus_bits": 180}

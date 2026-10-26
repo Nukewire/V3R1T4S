@@ -1,0 +1,1 @@
+T15 built: nnz=14316140 maxrowsum=1219 bound~2^169 [7s]
